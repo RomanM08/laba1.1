@@ -1,1 +1,36 @@
 # laba1.1
+/**************
+* Мхеян Роман *
+* ПИ - 261    *
+* Вар 4       *
+**************/
+
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+    double a, b, c;
+    double T1, T2;
+
+    cout << "Введите a, b, c: ";
+    cin >> a >> b >> c;
+
+    cout << "Введите T1, T2: ";
+    cin >> T1 >> T2;
+
+    double K = (c - 1.0) / c;
+
+    double n1 = 1.0 - pow((1.0 / b), K);
+
+    double n2 = (T2 - T1) / (T2 + (T2 - T1) / ((c - 1.0) * log(a)));
+
+    double n3 = 1.0 - K * (log(b) / (pow(b, K) - 1.0));
+
+    cout << "n1 = " << n1 << endl;
+    cout << "n2 = " << n2 << endl;
+    cout << "n3 = " << n3 << endl;
+
+    return 0;
+}
